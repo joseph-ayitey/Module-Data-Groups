@@ -1,7 +1,7 @@
 // Predict and explain first...
 
-//When you try to interpolate an object (recipe) into a template string, JavaScript converts it to a string using toString().
-//its broken because recipe is an object, not a string
+/*When you try to interpolate an object (recipe) into a template string, JavaScript converts it to a string using toString().
+its broken because recipe is an object, not a string*/
 
 // This program should log out the title, how many it serves and the ingredients.
 // Each ingredient should be logged on a new line
