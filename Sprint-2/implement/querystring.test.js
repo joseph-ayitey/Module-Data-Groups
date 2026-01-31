@@ -10,3 +10,26 @@ test("parses querystring values containing =", () => {
     "equation": "x=y+1",
   });
 });
+
+//Other cases
+//Empty string 
+
+test("parses empty query string", () => {
+  expect(parseQueryString("")).toEqual({});
+});
+
+
+//Key with no value
+test("parses key with no value", () => {
+  expect(parseQueryString("flag")).toEqual({
+    flag: "",
+  });
+});
+
+
+// Key with empty value
+test("parses key with empty value after equals", () => {
+  expect(parseQueryString("flag=")).toEqual({
+    flag: "",
+  });
+});
