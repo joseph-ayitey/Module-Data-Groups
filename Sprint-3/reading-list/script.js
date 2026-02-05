@@ -21,3 +21,26 @@ const books = [
   },
 ];
 
+function readingList(books) {
+  const bookList = document.getElementById("reading-list");
+  bookList.innerHTML = "";
+
+  books.forEach((book) => {
+    const li = document.createElement("li");
+    li.style.backgroundColor = book.alreadyRead ? "green" : "red";
+
+    const img = document.createElement("img");
+    img.src = book.bookCoverImage;
+
+    const text = document.createElement("p");
+    text.textContent = `${book.title} by ${book.author}`;
+
+    li.appendChild(img);
+    li.appendChild(text);
+
+    bookList.appendChild(li);
+  });
+}
+
+
+readingList(books);
