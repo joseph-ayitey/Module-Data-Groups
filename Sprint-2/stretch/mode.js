@@ -9,6 +9,10 @@
 // into smaller functions using the stages above
 
 function calculateMode(list) {
+   if (!Array.isArray(list) || list.length === 0) {
+    return NaN;
+   } // i add array to complete the implementation
+
   // track frequency of each value
   let freqs = new Map();
 
@@ -31,6 +35,8 @@ function calculateMode(list) {
   }
 
   return maxFreq === 0 ? NaN : mode;
+
 }
+
 
 module.exports = calculateMode;

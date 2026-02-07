@@ -1,1 +1,96 @@
-/** Write your CSS in here **/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  padding: 20px;
+}
+
+
+body > div, body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.card {
+  background: #f5adad;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+h1 {
+  color: #070606;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+#quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #4d4d51;
+  margin-bottom: 15px;
+}
+
+
+
+#author {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #bc1111;
+  margin-bottom: 25px;
+}
+
+
+button {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #5548c8;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+  #quote {
+    font-size: 1.2rem;
+  }
+
+  #author {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+}
